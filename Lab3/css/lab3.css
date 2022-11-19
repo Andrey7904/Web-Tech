@@ -1,0 +1,137 @@
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width : 1000px) {
+  header {
+    font-size:0.8em;
+}
+  footer {
+      font-size:0.8em;
+  }
+}
+
+body { 
+    display: grid;
+    grid-template-areas: 
+      "header pagemenu pagemenu"
+      "articleleft articletop articleright"
+      "articleleft picturebot articleright"
+      "footer footerp1 articleright";
+    grid-template-rows: 120px auto auto 120px;
+    grid-template-columns: 25% 50% 25%;
+    grid-gap: 0px;
+    height:100%;
+    width:100%;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgb(206, 13, 13);
+  }
+  header {
+    display: grid;
+    padding: 20px;
+    background: #a6c4e9;
+  }
+  pagemenu {
+    display: grid;
+    padding: 20px;
+    background: #a6c4e9;
+  }
+  pagemenu ul {
+    display: grid;
+    justify-content: end;
+    font-size: 1.3em;
+    grid-auto-columns: min-content;
+    grid-auto-flow: column;
+    list-style: none;
+  }
+  pagemenu ul li {
+    list-style-type: none;
+    float: left;
+    margin: 0 60px;
+  }
+  footer {
+    display: grid;
+    padding: 20px;
+    background: #a6c4e9;
+  }
+  footerp1{
+    display: grid;
+    padding: 20px;
+    background: #a6c4e9;
+    font-size: 1.1em;
+    justify-items: end;
+    align-items:center;
+  }
+  articletop {
+    display: grid;
+    padding: 20px;
+    background: rgb(255, 255, 255);
+    align-items: center;
+    justify-items: center;
+    text-align: right;
+  }
+
+  picturebot{
+    display: grid;
+    background: #ebf5d9;
+    margin-top: auto;
+  }
+  picturebot img {
+    width: 100%;
+    object-fit: contain;
+   height: 100%;
+   max-height: 100px;
+ }
+
+  articleleft{
+    text-align: right;
+    padding: 20px;
+    background: #ffebdb;
+  }
+
+articleleft ol {
+  text-align: left;
+  margin-left: auto;
+}
+
+  articleright {
+    text-align: right;
+    padding: 20px;
+    background: #ffebdb;
+  }
+  articleright ul {
+    direction: rtl;
+}
+
+  #pageHeader {
+    grid-area: header;
+  }
+  #pageFooter {
+    grid-area: footer;
+  }
+  #pageFooterp1 {
+    grid-area: footerp1;
+  }
+  #pageMenu {
+    grid-area: pagemenu;
+  }
+  #Articletop { 
+    grid-area: articletop;      
+  }
+  #Articlebot { 
+    grid-area: picturebot;      
+  }
+  #mainLeft { 
+    grid-area: articleleft; 
+  }
+  #mainRight { 
+    grid-area: articleright; 
+  }
+ 
