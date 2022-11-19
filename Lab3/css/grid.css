@@ -10,7 +10,7 @@ body {
       "articleleft articletop articleright"
       "articleleft picturebot articleright"
       "footer footerp1 articleright";
-    grid-template-rows: 140px auto auto 140px;
+    grid-template-rows: 120px auto auto 120px;
     grid-template-columns: 25% 50% 25%;
     grid-gap: 0px;
     height:100%;
